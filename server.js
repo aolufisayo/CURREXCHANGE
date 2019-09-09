@@ -7,7 +7,9 @@ const { resolvers } = require('./resolvers');
 const PORT = process.env.PORT || 5000
 const server = new ApolloServer({
     typeDefs,
-    resolvers
+    resolvers,
+    introspection: true,
+    playground: true
 });
 
 const path = '/graphiql'
